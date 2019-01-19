@@ -1,0 +1,28 @@
+@keyframes am-hide-ak {
+    0% {
+        opacity   : 1;
+        transform : translate3d(0, 0, 0) scale3d(1, 1, 1);
+    }
+    60% {
+        opacity   : 1;
+        transform : translate3d(0, -10%, 0) scale3d(1, .95, 1);
+    }
+    100% {
+        opacity   : 0;
+        transform : translate3d(0, 100%, 0) scale3d(1, 1, 1);
+    }
+}
+
+// 引用
+%am-hide-ak {
+    transform            : translate3d(0, 0, 0) scale3d(1, 1, 1);
+    opacity              : 0;
+    transform-style      : preserve-3d;
+    animation-play-state : paused;
+}
+
+// 即用
+//.am-hide-ak {
+//    @extend %am-hide-ak;
+//    animation : am-hide-ak .3s both .1s;
+//}

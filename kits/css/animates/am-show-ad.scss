@@ -1,0 +1,20 @@
+@keyframes am-show-ad {
+    0% { transform : rotate3d(0, 0, 1, 30deg); }
+    60% { transform : rotate3d(0, 0, 1, -1deg); }
+    70% { transform : rotate3d(0, 0, 1, -1deg); }
+    100% { transform : rotate3d(0, 0, 1, 0deg); }
+}
+
+// 引用
+%am-show-ad {
+    transform            : rotate3d(0, 0, 1, 30deg);
+    transform-origin     : 50% 200%;
+    transform-style      : preserve-3d;
+    animation-play-state : paused;
+}
+
+// 即用
+//.am-show-ad {
+//    @extend %am-show-ad;
+//    animation : am-show-ad .4s both .15s;
+//}

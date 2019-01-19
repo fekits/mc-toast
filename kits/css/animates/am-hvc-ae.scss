@@ -1,0 +1,24 @@
+@import "am-show-ae";
+@import "am-hide-ae";
+
+%am-hvc-ae {
+    &.show {
+        & > div {
+            @extend %am-show-ae;
+            animation : am-show-ae 350ms 100ms both;
+        }
+    }
+
+    &.hide {
+        opacity    : 0;
+        transition : 150ms 450ms;
+        & > div {
+            @extend %am-hide-ae;
+            animation : am-hide-ae 350ms 100ms both;
+        }
+    }
+
+    &.none {
+        display : none;
+    }
+}

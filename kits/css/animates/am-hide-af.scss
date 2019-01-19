@@ -1,0 +1,19 @@
+@keyframes am-hide-af {
+    0% { transform : perspective(500px) rotateX(0deg); opacity : 1;}
+    60% { transform : perspective(500px) rotateX(20deg); opacity : 1;}
+    100% { transform : perspective(500px) rotateX(-45deg); opacity : 0;}
+}
+
+// 引用
+%am-hide-af {
+    transform            : perspective(500px) rotateX(0deg);
+    opacity              : 1;
+    transform-style      : preserve-3d;
+    animation-play-state : paused;
+}
+
+// 即用
+//.am-hide-af {
+//    @extend %am-hide-af;
+//    animation       : am-hide-af .5s both;
+//}

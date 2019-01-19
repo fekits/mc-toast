@@ -1,0 +1,37 @@
+@keyframes am-show-ai {
+    0% {
+        opacity   : 0;
+        transform : skewX(0deg) translate3d(100%, 0, 0) scale3d(1, 1, 1);
+    }
+    25% {
+        opacity   : 1;
+        transform : skewX(0deg) translate3d(0, 0, 0) scale3d(.97, 1, 1);
+    }
+    50% {
+        opacity   : 1;
+        transform : skewX(5deg) translate3d(0, 0, 0) scale3d(.95, 1, 1);
+    }
+    75% {
+        opacity   : 1;
+        transform : skewX(-3deg) translate3d(0, 0, 0) scale3d(.98, 1, 1);
+    }
+    100% {
+        opacity   : 1;
+        transform : skewX(0deg) translate3d(0, 0, 0) scale3d(1, 1, 1);
+    }
+}
+
+// 引用
+%am-show-ai {
+    opacity              : 0;
+    transform            : scale3d(2, 2, 1) translate3d(0, -30%, 0);
+    transform-style      : preserve-3d;
+    animation-play-state : paused;
+    transform-origin     : 0 100%;
+}
+
+// 即用
+//.am-show-ai {
+//    @extend %am-show-ai;
+//    animation : am-show-ai .3s both;
+//}

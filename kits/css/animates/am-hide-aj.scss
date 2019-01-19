@@ -1,0 +1,29 @@
+@keyframes am-hide-aj {
+    0% {
+        opacity   : 1;
+        transform : perspective(400px) rotateY(0deg);
+    }
+    70% {
+        opacity   : 1;
+        transform : perspective(400px) rotateY(-20deg);
+    }
+    100% {
+        opacity   : 0;
+        transform : perspective(400px) rotateY(80deg);
+    }
+}
+
+// 引用
+%am-hide-aj {
+    opacity              : 1;
+    transform            : perspective(400px) rotateY(0deg);
+    transform-style      : preserve-3d;
+    animation-play-state : paused;
+    backface-visibility  : visible;
+}
+
+// 即用
+//.am-hide-aj {
+//    @extend %am-hide-aj;
+//    animation : am-hide-aj .3s both;
+//}

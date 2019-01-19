@@ -1,0 +1,22 @@
+@keyframes am-show-af {
+    0% { transform : perspective(500px) rotateX(45deg); opacity : 0 }
+    20% { transform : perspective(500px) rotateX(-7deg); opacity : 1 }
+    40% { transform : perspective(500px) rotateX(5deg); opacity : 1 }
+    60% { transform : perspective(500px) rotateX(-3deg); opacity : 1 }
+    80% { transform : perspective(500px) rotateX(1.5deg); opacity : 1 }
+    100% {transform : perspective(500px) rotateX(0deg); opacity : 1 }
+}
+
+// 引用
+%am-show-af {
+    transform            : perspective(500px) rotateX(45deg);
+    opacity              : 0;
+    transform-style      : preserve-3d;
+    animation-play-state : paused;
+}
+
+// 即用
+//.am-show-af {
+//    @extend %am-show-af;
+//    animation : am-show-af .5s both;
+//}

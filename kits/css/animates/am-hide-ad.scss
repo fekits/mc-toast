@@ -1,0 +1,19 @@
+@keyframes am-hide-ad {
+    0% { transform : rotate3d(0, 0, 1, 0deg); }
+    40% { transform : rotate3d(0, 0, 1, 2deg); }
+    100% { transform : rotate3d(0, 0, 1, -30deg); }
+}
+
+// 引用
+%am-hide-ad {
+    transform            : rotate3d(0, 0, 1, 0deg);
+    transform-origin     : 50% 200%;
+    transform-style      : preserve-3d;
+    animation-play-state : paused;
+}
+
+// 即用
+//.am-hide-ad {
+//    @extend %am-hide-ad;
+//    animation : am-hide-ad .4s both;
+//}

@@ -1,0 +1,15 @@
+@keyframes am-hide-ag {
+    0% {opacity : 1}
+    100% {opacity : 0 }
+}
+
+%am-hide-ag {
+    opacity              : 1;
+    transform-style      : preserve-3d;
+    animation-play-state : paused;
+}
+
+//.am-hide-ag {
+//    @extend %am-hide-ag;
+//    animation : am-hide-ag .3s both;
+//}

@@ -1,0 +1,18 @@
+@keyframes am-show-ab {
+    0% { transform : scale(0.7, 0.7); opacity : 0 }
+    100% { transform : scale(1, 1); opacity : 1 }
+}
+
+// 引用
+%am-show-ab {
+    transform            : scale(0.7, 0.7);
+    opacity              : 0;
+    transform-style      : preserve-3d;
+    animation-play-state : paused;
+}
+
+// 即用
+//.am-show-ab {
+//    @extend %am-show-ab;
+//    animation : am-show-ab .35s both .1s;
+//}

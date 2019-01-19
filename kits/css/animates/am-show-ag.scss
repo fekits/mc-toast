@@ -1,0 +1,17 @@
+@keyframes am-show-ag {
+    0% {opacity : 0 }
+    100% {opacity : 1 }
+}
+
+// 引用
+%am-show-ag {
+    opacity              : 0;
+    transform-style      : preserve-3d;
+    animation-play-state : paused;
+}
+
+// 即用
+//.am-show-ag {
+//    @extend %am-show-ag;
+//    animation : am-show-ag .3s both;
+//}

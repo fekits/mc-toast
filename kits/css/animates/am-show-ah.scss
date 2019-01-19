@@ -1,0 +1,23 @@
+@keyframes am-show-ah {
+    0% { opacity : 0; transform : scale3d(3, 3, 1)}
+    50% { opacity : 1; transform : scale3d(.9, .9, 1)}
+    60% { opacity : 1; transform : scale3d(1.05, 1.05, 1)}
+    70% { opacity : 1; transform : scale3d(.95, .95, 1)}
+    80% { opacity : 1; transform : scale3d(1.02, 1.02, 1)}
+    90% { opacity : 1; transform : scale3d(.98, .98, 1)}
+    100% { opacity : 1; transform : scale3d(1, 1, 1)}
+}
+
+// 引用
+%am-show-ah {
+    opacity          : 0;
+    transform        : scale3d(3, 3, 1);
+    transform-style  : preserve-3d;
+    transform-origin : 50% 50%;
+}
+
+// 即用
+//.am-show-ah {
+//    @extend %am-show-ah;
+//    animation : am-show-ah .3s both;
+//}

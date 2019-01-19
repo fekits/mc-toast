@@ -1,0 +1,24 @@
+@import "am-show-ad";
+@import "am-hide-ad";
+
+%am-hvc-ad {
+    &.show {
+        & > div {
+            @extend %am-show-ad;
+            animation : am-show-ad 350ms 100ms both;
+        }
+    }
+
+    &.hide {
+        opacity    : 0;
+        transition : 200ms 250ms;
+        & > div {
+            @extend %am-hide-ad;
+            animation : am-hide-ad 350ms 100ms both;
+        }
+    }
+
+    &.none {
+        display : none;
+    }
+}

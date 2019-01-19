@@ -1,0 +1,29 @@
+@keyframes am-hide-ai {
+    0% {
+        opacity   : 1;
+        transform : skewX(0deg) translate3d(0, 0, 0) scale3d(1, 1, 1);
+    }
+    60% {
+        opacity   : 1;
+        transform : skewX(-3deg) translate3d(10%, 0, 0) scale3d(.98, 1, 1);
+    }
+    100% {
+        opacity   : 0;
+        transform : skewX(0deg) translate3d(-110%, 0, 0) scale3d(1.2, 1, 1);
+    }
+}
+
+// 引用
+%am-hide-ai {
+    opacity              : 1;
+    transform            : skewX(0deg) translate3d(0, 0, 0) scale3d(1, 1, 1);
+    transform-style      : preserve-3d;
+    animation-play-state : paused;
+    transform-origin     : 0 100%;
+}
+
+// 即用
+//.am-hide-ai {
+//    @extend %am-hide-ai;
+//    animation : am-hide-ai .3s both;
+//}

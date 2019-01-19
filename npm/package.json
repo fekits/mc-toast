@@ -1,0 +1,22 @@
+{
+  "name": "mc-toast",
+  "version": "2.0.0",
+  "description": "一个TOAST提示插件,可扩展各种主题形式的提示。",
+  "main": "mc-toast.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/fekits/mc-toast.git"
+  },
+  "keywords": [
+    "toast"
+  ],
+  "author": "xiaojunbo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/fekits/mc-toast/issues"
+  },
+  "homepage": "https://gitlab.com/fekits/mc-toast#readme"
+}

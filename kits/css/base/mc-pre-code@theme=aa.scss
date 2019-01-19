@@ -1,0 +1,27 @@
+pre {
+  margin        : 0;
+  padding       : 1em;
+  background    : #2b2b2b;
+  color         : #fff;
+  border-radius : 2px;
+
+  .co-fun {
+    color : #ffc66d;
+  }
+
+  .co-key {
+    color : #d38dff;
+  }
+
+  .co-val {
+    color : #a5c261;
+  }
+
+  .co-sym {
+    color : #c4d5e6;
+  }
+
+  .co-oth {
+    color : #cc7832;
+  }
+}

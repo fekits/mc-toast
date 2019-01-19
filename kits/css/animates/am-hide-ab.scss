@@ -1,0 +1,18 @@
+@keyframes am-hide-ab {
+    0% { transform : scale(1, 1);opacity : 1; }
+    100% { transform : scale(0.3, 0.3); opacity : 0 }
+}
+
+// 引用
+%am-hide-ab {
+    transform            : scale(1, 1);
+    opacity              : 1;
+    transform-style      : preserve-3d;
+    animation-play-state : paused;
+}
+
+// 即用
+//.am-hide-ab {
+//    @extend %am-hide-ab;
+//    animation : am-hide-ab .2s both;
+//}

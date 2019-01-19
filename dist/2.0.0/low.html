@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xui="0.0.1">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="description" content="xinxindai">
+    <meta name="author" content="UI Manxiaoman | Front-end Junbo">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>MC-TOAST</title>
+    <link href="./css/low.min.css" rel="stylesheet">
+    <link href="./css/mc-toast-low-aa.min.css" rel="stylesheet">
+</head>
+<body>
+<div>
+    <h4>第一套主题</h4>
+    <button class="btn btn-success" data-toast-type="success" data-toast-theme="aa" data-toast-msg="显示一条成功消息显示1秒" data-toast-time="100000">
+        success theme@aa time=100000
+    </button>
+
+    <pre data-theme="aa">
+<code class="co-oth">import</code> <code class="co-fun">mcToast</code> <code class="co-oth">from</code> <code
+            class="co-val">'./mc-toast'</code><code class="co-oth">;</code>
+<code class="co-fun">mcToast</code><code class="co-sym">({</code>
+    <code class="co-key">time  </code><code class="co-sym">:</code> <code class="co-sym">1000</code><code class="co-oth">,</code>
+    <code class="co-key">icon  </code><code class="co-sym">:</code> <code class="co-val">'success'</code><code class="co-oth">,</code>
+    <code class="co-key">msg   </code><code class="co-sym">:</code> <code class="co-val">'显示一条成功消息显示1秒'</code><code class="co-oth">,</code>
+    <code class="co-key">theme </code><code class="co-sym">:</code> <code class="co-val">'aa'</code><code class="co-oth">,</code>
+    <code class="co-fun">then  </code><code class="co-sym">:</code> <code class="co-oth">function</code> <code class="co-sym">(<code class="co-sym">o</code>) {</code>
+        <code class="co-fun">if</code> <code class="co-sym">(</code><code class="co-sym">o.</code><code class="co-key">status</code> <code class="co-sym">===</code> <code class="co-val">'show'</code><code class="co-sym">) {</code>
+            <code class="co-sym">console.</code><code class="co-fun">log</code><code class="co-sym">(</code><code class="co-val">'出来了〜'</code><code class="co-sym">)</code>;
+        <code class="co-sym">}</code>
+        <code class="co-fun">if</code> <code class="co-sym">(</code><code class="co-sym">o.</code><code class="co-key">status</code> <code class="co-sym">===</code> <code class="co-val">'hide'</code><code class="co-sym">) {</code>
+            <code class="co-sym">console.</code><code class="co-fun">log</code><code class="co-sym">(</code><code class="co-val">'消失了〜'</code><code class="co-sym">)</code>;
+        <code class="co-sym">}</code>
+    <code class="co-sym">}</code>
+<code class="co-sym">})</code><code class="co-oth">;</code>
+</pre>
+
+    <button class="btn btn-warning" data-toast-type="warning" data-toast-theme="aa" data-toast-msg="提示一条警告消息显示5秒" data-toast-time="5000">
+        warning theme@aa time=5000
+    </button>
+    <button class="btn btn-error" data-toast-type="error" data-toast-theme="aa" data-toast-msg="提示一条错误消息显示2秒" data-toast-time="2000">
+        error theme@aa time=2000
+    </button>
+    <button class="btn btn-loading" data-toast-type="loading" data-toast-theme="aa" data-toast-msg="正在加载中..." data-toast-time="7000">
+        loading theme@aa time=7000
+    </button>
+    <button class="btn btn-network" data-toast-type="network" data-toast-theme="aa" data-toast-msg="无法链接网络!" data-toast-time="3000">
+        network 5s theme@aa time=3000
+    </button>
+</div>
+<br>
+<div>
+    <p class="ac">更多主题扩展中...</p>
+</div>
+<br>
+<div>
+    <h4>传参说明</h4>
+    <table>
+        <tr>
+            <th>参数名</th>
+            <th>类型</th>
+            <th>示例</th>
+            <th>说明</th>
+        </tr>
+        <tr>
+            <td>id</td>
+            <td>String</td>
+            <td>'#aaa'</td>
+            <td>非必要不须填写，默认自行分配为#mc-toast</td>
+        </tr>
+        <tr>
+            <td>time</td>
+            <td>Number</td>
+            <td>3000</td>
+            <td>选填，填写毫秒数，如不填写则默认为2秒</td>
+        </tr>
+        <tr>
+            <td>icon</td>
+            <td>String</td>
+            <td>
+                'success'<br>
+                'warning'<br>
+                'error'<br>
+                'loading'<br>
+                'network'
+            </td>
+            <td>选填，如不填写则默认为无图标只显示文字。</td>
+        </tr>
+        <tr>
+            <td>msg</td>
+            <td>String</td>
+            <td>'显示一条提示'</td>
+            <td>必填，为空的话不报错也不会显示空的提示框。</td>
+        </tr>
+        <tr>
+            <td>theme</td>
+            <td>String</td>
+            <td>'ab'</td>
+            <td>必填，主题的css没有时间添加。敬请V2发布。</td>
+        </tr>
+        <tr>
+            <td>then</td>
+            <td>Function</td>
+            <td>function(o){console.log(o)}</td>
+            <td>选填，提示显示或消失时的回调，有传参可以判断是显示和是消失，以其它一些后操作</td>
+        </tr>
+    </table>
+</div>
+<br>
+<div>
+    <h4>版本说明</h4>
+    <p>当前版本：v1.0.0</p>
+    <p>仓库地址：https://gitlab.com/mcui/plugins/mc-toast.git</p>
+</div>
+<br>
+<script src="./js/low.min.js"></script>
+</body>
+</html>

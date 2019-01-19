@@ -1,0 +1,51 @@
+// 重置
+@import "../../../kits/css/base/mc-reset@mobile-v1";
+// 基础
+@import "../../../kits/css/base/mc-base@mobile-v1";
+// 主题
+//@import "mc-toast@theme=aa";
+//@import "mc-toast@theme=ab";
+//@import "mc-toast@theme=ac";
+
+html {
+  font-size : 12px;
+}
+
+body {
+  padding : 1em;
+}
+
+h4 {
+  text-align  : center;
+  margin      : 1em 0 .5em 0;
+  font-weight : bold;
+}
+
+.btn {
+  width         : 100%;
+  height        : 3rem;
+  margin        : .5rem 0 .5rem 0;
+  border-radius : 3px;
+  background    : #fafafa;
+  border        : 1px solid #dfdfdf;
+}
+
+table th:nth-child(1), table th:nth-child(2), table th:nth-child(3) { white-space : nowrap;}
+
+table {
+  border     : 1px solid #dfdfdf;
+  text-align : left;
+}
+
+th, td {
+  border      : 1px solid #dfdfdf;
+  padding     : 5px;
+  font-weight : normal;
+}
+
+pre {
+  margin-bottom : 2em !important;
+}
+
+@import "../../../kits/css/base/mc-pre-code@theme=aa";
+

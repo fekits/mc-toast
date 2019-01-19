@@ -1,0 +1,19 @@
+@keyframes am-hide-ah {
+    0% { opacity : 1; transform : scale3d(1, 1, 1)}
+    60% { opacity : 1; transform : scale3d(.8, .8, 1)}
+    100% { opacity : 0; transform : scale3d(2, 2, 1)}
+}
+
+// 引用
+%am-hide-ah {
+    opacity              : 1;
+    transform            : scale3d(1, 1, 1);
+    transform-style      : preserve-3d;
+    animation-play-state : paused;
+}
+
+// 即用
+//.am-hide-ah {
+//    @extend %am-hide-ah;
+//    animation : am-hide-ah .3s both;
+//}
